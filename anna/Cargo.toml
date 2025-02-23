@@ -3,8 +3,9 @@ name = "anna"
 version = "0.1.0"
 edition = "2021"
 authors = ["Jessica Black <me@jessica.black>"]
-license = "MIT OR Apache-2.0"
+license = "MPL-2.0"
 public = false
 
 [dependencies]
+color-eyre = "0.6.3"
 winlock = { path = "../winlock" }
