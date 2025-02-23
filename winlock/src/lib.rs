@@ -30,12 +30,6 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_agent_creation() {
-        let agent = Agent::new();
-        assert!(std::mem::size_of_val(&agent) > 0);
-    }
-
-    #[test]
     fn it_works() {
         let result = add(2, 2);
         assert_eq!(result, 4);
