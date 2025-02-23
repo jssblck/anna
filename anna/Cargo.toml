@@ -1,0 +1,10 @@
+[package]
+name = "anna"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jessica Black <me@jessica.black>"]
+license = "MIT OR Apache-2.0"
+public = false
+
+[dependencies]
+winlock = { path = "../winlock" }

@@ -1,0 +1,6 @@
+[workspace]
+members = ["anna", "winlock"]
+resolver = "2"
+
+[profile.release]
+strip = true
