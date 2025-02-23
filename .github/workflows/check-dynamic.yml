@@ -28,7 +28,7 @@ jobs:
         toolchain: stable
         targets: ${{ matrix.settings.target }}
     - uses: taiki-e/install-action@nextest
-    - uses: Swatinem/rust-cache@v2.7.5
+    - uses: Swatinem/rust-cache@v2.7.7
       with:
         key: test_${{ matrix.settings.host }}_${{ matrix.settings.target }}
     - run: cargo nextest run --all-targets
@@ -59,7 +59,7 @@ jobs:
       with:
         toolchain: stable
         targets: ${{ matrix.settings.target }}
-    - uses: Swatinem/rust-cache@v2.7.5
+    - uses: Swatinem/rust-cache@v2.7.7
       with:
         key: build_${{ matrix.settings.host }}_${{ matrix.settings.target }}
     - run: cargo check --all --bins --examples --tests
