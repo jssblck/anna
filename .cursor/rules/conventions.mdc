@@ -1,0 +1,32 @@
+---
+description: Convention
+globs: 
+---
+ # General conventions
+- Try to match the style of the codebase.
+- Think in strong types and use them to constrain the problem space.
+- Don't add useless comments that just duplicate the code.
+- DO include comments explaining _why_ we do something.
+- Prefer functional style code when possible.
+- Prefer type inference for the left hand side of assignments.
+- Prefer modular and composable code.
+- Avoid mutation when possible.
+- Prefer the newtype pattern for public interfaces to avoid leaking implementation details.
+- Write comments in complete sentences with proper english written in technical writing tone.
+- Be terse in chats; if you think more context is needed prefer to add it in code comments.
+- Add MPL2.0 license headers to files. Use standard comments, not doc comments, for this.
+
+# Rust specific
+- Prefer named module files instead of `mod.rs`
+- Add integration tests, not unit tests. Integration tests always go under `tests/it/`.
+- Add proc macro invocations below comments.
+- Always annotate new types with rust interop derives.
+- Prefer `expect` over `unwrap`, but proper errors are better than both.
+- Prefer `color_eyre` errors unless I ask for specific errors to be created.
+- Prefer inlining format string variables when possible.
+- Do not edit `Cargo.toml`, I will use `cargo edit` to do so. Feel free to provide the commands.
+- Put blank lines between enum variants and struct fields.
+- Never use left-hand-side type annotations for conversions. If types can't be inferred, use explicit conversion methods or a turbofish:
+  - Prefer `String::from("hello")` over `let s: String = "hello".into()`
+  - Prefer `Vec::from([1,2,3])` over `let v: Vec<i32> = [1,2,3].into()`
+  - Prefer `OtherType::from(value)` over `let x: OtherType = value.into()`
