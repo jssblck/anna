@@ -22,7 +22,7 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     name: test / ${{ matrix.settings.host }} / ${{ matrix.settings.target }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - uses: dtolnay/rust-toolchain@master
       with:
         toolchain: stable
@@ -54,7 +54,7 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     name: build / ${{ matrix.settings.host }} / ${{ matrix.settings.target }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - uses: dtolnay/rust-toolchain@master
       with:
         toolchain: stable
